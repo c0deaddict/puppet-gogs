@@ -2,13 +2,14 @@
   "name": "c0deaddict-gogs",
   "version": "0.1.0",
   "author": "c0deaddict",
-  "summary": null,
+  "summary": "Gogs (Go Git Service) is a painless self-hosted Git service",
   "license": "Apache 2.0",
-  "source": "",
-  "project_page": null,
+  "source": "https://github.com/c0deaddict/puppet-gogs",
+  "project_page": "",
   "issues_url": null,
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"garethr-docker","version_requirement":">= 4.0.0"}
   ]
 }
 
