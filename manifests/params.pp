@@ -20,4 +20,5 @@ class gogs::params {
   $ssh_internal_port    = 22
   $internal_data_dir    = '/data'
   $restart_service      = true
+  $disable_registration = false
 }
