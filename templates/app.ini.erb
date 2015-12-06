@@ -1,0 +1,47 @@
+APP_NAME = <%= scope['gogs::app_name'] %>
+RUN_USER = git
+RUN_MODE = prod
+
+[database]
+DB_TYPE = <%= scope['gogs::db_type'] %>
+HOST = <%= scope['gogs::db_host'] %>
+NAME = <%= scope['gogs::db_name'] %>
+USER = <%= scope['gogs::db_user'] %>
+PASSWD = <%= scope['gogs::db_password'] %>
+SSL_MODE = disable
+PATH = <%= scope['gogs::db_path'] %>
+
+[repository]
+ROOT = /data/git/gogs-repositories
+
+[server]
+DOMAIN = <%= scope['gogs::domain'] %>
+HTTP_PORT = 3000
+ROOT_URL = <%= scope['gogs::actual_root_url'] %>
+DISABLE_SSH = <%= scope['gogs::disable_ssh'] %>
+SSH_PORT = 22
+OFFLINE_MODE = <%= scope['gogs::offline_mode'] %>
+
+[mailer]
+ENABLED = false
+
+[service]
+REGISTER_EMAIL_CONFIRM = false
+ENABLE_NOTIFY_MAIL = false
+DISABLE_REGISTRATION = true
+ENABLE_CAPTCHA = false
+REQUIRE_SIGNIN_VIEW = true
+
+[picture]
+DISABLE_GRAVATAR = true
+
+[session]
+PROVIDER = file
+
+[log]
+MODE = file
+LEVEL = Info
+
+[security]
+INSTALL_LOCK = true
+SECRET_KEY = <%= scope['gogs::secret_key'] %>
