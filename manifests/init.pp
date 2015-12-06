@@ -25,7 +25,7 @@ class gogs(
 ) inherits gogs::params {
  
   $actual_http_port = $http_port ? {
-    undef => $protocol ? {
+    undef => $http_protocol ? {
       'https' => 443,
       default => 80,
     },

@@ -1,6 +1,6 @@
 class gogs::service {
 
-  $http_only_ports = ["${gogs::http_host}:${gogs::http_actual_port}:${gogs::params::http_internal_port}"]
+  $http_only_ports = ["${gogs::http_host}:${gogs::actual_http_port}:${gogs::params::http_internal_port}"]
   $actual_ports = $gogs::disable_ssh ? {
     true     => $http_only_ports,
     default  => concat($http_only_ports, "${gogs::ssh_host}:${gogs::ssh_port}:${gogs::params::ssh_internal_port}")
