@@ -22,7 +22,7 @@ class gogs(
   $app_name             = $gogs::params::app_name,
   $restart_service      = $gogs::params::restart_service,
   $memory_limit         = undef,
-  $disable_registration = $gogs::params::disable_registeration,
+  $disable_registration = $gogs::params::disable_registration,
 ) inherits gogs::params {
  
   $actual_http_port = $http_port ? {
